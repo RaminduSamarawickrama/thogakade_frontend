@@ -17,7 +17,7 @@ export function Menu() {
 
   return (
     <div
-      className={`bg-blue-600 text-white ${
+      className={`bg-gray-800 text-white ${
         isSidebarOpen ? "w-64" : "w-16"
       } transition-all duration-300 ease-in-out`}
     >
@@ -32,6 +32,9 @@ export function Menu() {
             }`}
           />
         </button>
+        {isSidebarOpen && (
+          <h1 className="text-center text-4xl font-bold">Welcome</h1>
+        )}
         <ul className="flex flex-col space-y-5 mt-5">
           <li>
             <Link
